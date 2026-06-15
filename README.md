@@ -145,37 +145,37 @@ Client Request → Controller → Repository → Database
 
 ## 📁 Project Structure
 
+# Project Structure
 TodoApi/
 │
-├── 📁 Controllers/ # API Endpoints
-│ └── 📄 TodoController.cs # HTTP request handlers
+├── Controllers/
+│ └── TodoController.cs
 │
-├── 📁 Models/ # Domain Entities
-│ └── 📄 TodoItem.cs # Todo database entity
+├── Models/
+│ └── TodoItem.cs
 │
-├── 📁 DTOs/ # Data Transfer Objects
-│ ├── 📄 TodoCreateDto.cs # Create request DTO
-│ ├── 📄 TodoUpdateDto.cs # Update request DTO
-│ └── 📄 TodoResponseDto.cs # Response DTO
+├── DTOs/
+│ ├── TodoCreateDto.cs
+│ ├── TodoUpdateDto.cs
+│ └── TodoResponseDto.cs
 │
-├── 📁 Repositories/ # Data Access Layer
-│ ├── 📄 ITodoRepository.cs # Repository interface
-│ └── 📄 TodoRepository.cs # Repository implementation
+├── Repositories/
+│ ├── ITodoRepository.cs
+│ └── TodoRepository.cs
 │
-├── 📁 Data/ # Database Context
-│ └── 📄 TodoContext.cs # EF Core DbContext
+├── Data/
+│ └── TodoContext.cs
 │
-├── 📁 Mappings/ # AutoMapper Profiles
-│ └── 📄 MappingProfile.cs # Object mapping configurations
+├── Mappings/
+│ └── MappingProfile.cs
 │
-├── 📁 Middlewares/ # Custom Middleware
-│ └── 📄 GlobalExceptionMiddleware.cs # Global error handler
+├── Middlewares/
+│ └── GlobalExceptionMiddleware.cs
 │
-├── 📁 Migrations/ # EF Core Migrations
-│ └── (Auto-generated migrations)
+├── Migrations/ # Auto-generated
 │
-├── 📄 Program.cs # Application entry point
-├── 📄 appsettings.json # Application configuration
-├── 📄 appsettings.Development.json # Development settings
-├── 📄 .gitignore # Git ignore file
-└── 📄 TodoApi.csproj # Project dependencies
+├── Program.cs
+├── appsettings.json
+├── appsettings.Development.json
+├── .gitignore
+└── TodoApi.csproj
