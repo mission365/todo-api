@@ -74,5 +74,3 @@ This Todo Management API is a backend service that allows clients to manage task
 | **Middleware** | `Middlewares/` | `GlobalExceptionMiddleware.cs` |
 | **Root Files** | `Root` | `Program.cs`, `appsettings.json`, `TodoApi.csproj` |
 
-
-MIT License © 2026 Your Name
