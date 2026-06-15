@@ -5,57 +5,34 @@
 [![Swagger](https://img.shields.io/badge/Swagger-UI-85EA2D?logo=swagger)](https://swagger.io/)
 [![AutoMapper](https://img.shields.io/badge/AutoMapper-12.0-A31F34)](https://automapper.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-A **production-ready RESTful Todo Management API** built with ASP.NET Core 9.0, following clean architecture principles and industry best practices.
-
-## 🚀 Quick Features
-- ✅ Full CRUD Operations
-- ✅ Repository Pattern Implementation
-- ✅ DTO & AutoMapper Integration
-- ✅ Global Exception Handling
-- ✅ Swagger/OpenAPI Documentation
-- ✅ Async/Await Pattern
-- ✅ SQL Server LocalDB Support
+A **production-ready RESTful Todo Management API** built with ASP.NET Core 9.0.
 
 ---
 
 ## 📋 Table of Contents
-- [Project Overview](#-project-overview)
-- [Technology Stack](#-technology-stack)
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Project Structure](#-project-structure)
-- [Installation Guide](#-installation-guide)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Error Handling](#-error-handling)
-- [Testing Guide](#-testing-guide)
-- [Performance](#-performance)
-- [Future Roadmap](#-future-roadmap)
-- [Contributing](#-contributing)
-- [FAQ](#-faq)
-- [Contact](#-contact)
-- [License](#-license)
+- Project Overview
+- Technology Stack
+- Features
+- Project Structure
+- Installation Guide
+- API Documentation
+- Error Handling
+- Testing Guide
+- FAQ
+- License
 
 ---
 
 ## 🎯 Project Overview
 
-This **Todo Management API** is a backend service that allows clients to manage tasks efficiently. Built with modern .NET practices, it serves as an excellent foundation for learning ASP.NET Core Web API development.
-
-### Business Value
-- **Task Management**: Create, track, and manage daily tasks
-- **Scalable Architecture**: Easy to extend with new features
-- **Production Ready**: Follows industry best practices
-- **Well Documentated**: Complete Swagger documentation
+This Todo Management API is a backend service that allows clients to manage tasks efficiently.
 
 ### Use Cases
-- Personal task management applications
+- Personal task management apps
 - Team collaboration tools
 - Project management systems
-- Learning resource for ASP.NET Core
-- Mobile app backend for todo apps
+- ASP.NET Core learning projects
 
 ---
 
@@ -64,95 +41,94 @@ This **Todo Management API** is a backend service that allows clients to manage 
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | ASP.NET Core | 9.0 | Web API Framework |
-| Entity Framework Core | 9.0 | ORM & Data Access |
-| SQL Server LocalDB | 2022 | Relational Database |
-| AutoMapper | 12.0.1 | Object Mapping |
-| Swagger/Swashbuckle | 7.0 | API Documentation |
-| .NET CLI | 9.0 | Development Tools |
-
-### Development Tools Required
-- **IDE**: Visual Studio 2022 / VS Code / JetBrains Rider
-- **Version Control**: Git & GitHub
-- **API Testing**: Postman / Swagger UI / cURL
-- **Database Management**: SQL Server Management Studio (SSMS)
+| Entity Framework Core | 9.0 | ORM |
+| SQL Server LocalDB | 2022 | Database |
+| AutoMapper | 12.0 | Object Mapping |
+| Swagger | 7.0 | API Docs |
 
 ---
 
 ## ✨ Features
 
-### Core Features
-- ✅ **Create Todo** - Add new tasks with title and description
-- ✅ **Read Todos** - Retrieve single or all todos
-- ✅ **Update Todo** - Modify existing tasks and mark completion
-- ✅ **Delete Todo** - Remove tasks permanently
+### Core
+- Create Todo
+- Read Todos
+- Update Todo
+- Delete Todo
 
-### Technical Features
-- ✅ **Repository Pattern** - Abstraction layer for data access
-- ✅ **DTO Pattern** - Secure data transfer between layers
-- ✅ **AutoMapper** - Automatic object-object mapping
-- ✅ **Global Exception Middleware** - Centralized error handling
-- ✅ **Swagger Integration** - Interactive API documentation
-- ✅ **Async Programming** - Non-blocking database operations
-- ✅ **Dependency Injection** - Loose coupling and testability
-- ✅ **SQL Server LocalDB** - Local development database
-
-### Security Features (Coming Soon)
-- 🔐 JWT Authentication
-- 🔐 Role-based Authorization
-- 🔐 Input Validation
-- 🔐 Rate Limiting
-
----
-
-## 🏗 Architecture
-
-### Layered Architecture
-┌─────────────────────────────────────────────────────────┐
-│ Presentation Layer │
-│ (Controllers/API) │
-└─────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────┐
-│ Application Layer │
-│ (DTOs, Mappings, Validators) │
-└─────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────┐
-│ Domain Layer │
-│ (Models/Entities) │
-└─────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────┐
-│ Infrastructure Layer │
-│ (Repositories, Data Context, Middleware) │
-└─────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────┐
-│ Database Layer │
-│ (SQL Server) │
-└─────────────────────────────────────────────────────────┘
-
-### Data Flow Diagram
-Client Request → Controller → Repository → Database
-↑ ↓ ↓ ↓
-└── Response ←─ DTO ←── Model ←─── SQL Query
+### Technical
+- Repository Pattern
+- DTO Pattern
+- AutoMapper
+- Global Exception Handling
+- Swagger UI
+- Async Programming
 
 ---
 
 ## 📁 Project Structure
 
-| Layer | Folder | Files |
-|-------|--------|-------|
-| **API Layer** | `Controllers/` | `TodoController.cs` |
-| **Domain Layer** | `Models/` | `TodoItem.cs` |
-| **Application Layer** | `DTOs/` | `TodoCreateDto.cs`, `TodoUpdateDto.cs`, `TodoResponseDto.cs` |
-| **Data Layer** | `Repositories/` | `ITodoRepository.cs`, `TodoRepository.cs` |
-| **Infrastructure** | `Data/` | `TodoContext.cs` |
-| **Configuration** | `Mappings/` | `MappingProfile.cs` |
-| **Middleware** | `Middlewares/` | `GlobalExceptionMiddleware.cs` |
-| **Root Files** | `Root` | `Program.cs`, `appsettings.json`, `TodoApi.csproj` |
+TodoApi/
+├── Controllers/
+├── Models/
+├── DTOs/
+├── Repositories/
+├── Data/
+├── Mappings/
+├── Middlewares/
+├── Migrations/
+├── Program.cs
+├── appsettings.json
+└── TodoApi.csproj
 
+---
+
+## 🚀 Installation Guide
+
+### 1. Clone
+```bash
+git clone https://github.com/yourusername/TodoApi.git
+cd TodoApi
+2. Restore
+dotnet restore
+3. Database Config
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=TodoDb;Trusted_Connection=True;"
+}
+4. Migrations
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+5. Run
+dotnet run
+6. Swagger
+
+https://localhost:5001/swagger
+
+📡 API Endpoints
+Method	Endpoint
+GET	/todo
+GET	/todo/{id}
+POST	/todo
+PUT	/todo/{id}
+DELETE	/todo/{id}
+🧪 Testing
+cURL Example
+curl -X POST https://localhost:5001/api/todo \
+-H "Content-Type: application/json" \
+-d '{"title":"Test","description":"Demo"}'
+⚠️ Error Format
+{
+  "statusCode": 404,
+  "message": "Not Found"
+}
+💬 FAQ
+
+Q: Production ready?
+Yes.
+
+Q: Auth support?
+Planned (JWT).
+
+📜 License
+
+MIT License © 2026 Your Name
