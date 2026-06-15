@@ -145,37 +145,14 @@ Client Request → Controller → Repository → Database
 
 ## 📁 Project Structure
 
-# Project Structure
-TodoApi/
-│
-├── Controllers/
-│ └── TodoController.cs
-│
-├── Models/
-│ └── TodoItem.cs
-│
-├── DTOs/
-│ ├── TodoCreateDto.cs
-│ ├── TodoUpdateDto.cs
-│ └── TodoResponseDto.cs
-│
-├── Repositories/
-│ ├── ITodoRepository.cs
-│ └── TodoRepository.cs
-│
-├── Data/
-│ └── TodoContext.cs
-│
-├── Mappings/
-│ └── MappingProfile.cs
-│
-├── Middlewares/
-│ └── GlobalExceptionMiddleware.cs
-│
-├── Migrations/ # Auto-generated
-│
-├── Program.cs
-├── appsettings.json
-├── appsettings.Development.json
-├── .gitignore
-└── TodoApi.csproj
+| Layer | Folder | Files |
+|-------|--------|-------|
+| **API Layer** | `Controllers/` | `TodoController.cs` |
+| **Domain Layer** | `Models/` | `TodoItem.cs` |
+| **Application Layer** | `DTOs/` | `TodoCreateDto.cs`, `TodoUpdateDto.cs`, `TodoResponseDto.cs` |
+| **Data Layer** | `Repositories/` | `ITodoRepository.cs`, `TodoRepository.cs` |
+| **Infrastructure** | `Data/` | `TodoContext.cs` |
+| **Configuration** | `Mappings/` | `MappingProfile.cs` |
+| **Middleware** | `Middlewares/` | `GlobalExceptionMiddleware.cs` |
+| **Root Files** | `Root` | `Program.cs`, `appsettings.json`, `TodoApi.csproj` |
+
