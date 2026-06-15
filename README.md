@@ -15,12 +15,6 @@ A **production-ready RESTful Todo Management API** built with ASP.NET Core 9.0.
 - Technology Stack
 - Features
 - Project Structure
-- Installation Guide
-- API Documentation
-- Error Handling
-- Testing Guide
-- FAQ
-- License
 
 ---
 
@@ -67,68 +61,18 @@ This Todo Management API is a backend service that allows clients to manage task
 ---
 
 ## 📁 Project Structure
+## 📁 Project Structure
 
-TodoApi/
-├── Controllers/
-├── Models/
-├── DTOs/
-├── Repositories/
-├── Data/
-├── Mappings/
-├── Middlewares/
-├── Migrations/
-├── Program.cs
-├── appsettings.json
-└── TodoApi.csproj
+| Layer | Folder | Files |
+|-------|--------|-------|
+| **API Layer** | `Controllers/` | `TodoController.cs` |
+| **Domain Layer** | `Models/` | `TodoItem.cs` |
+| **Application Layer** | `DTOs/` | `TodoCreateDto.cs`, `TodoUpdateDto.cs`, `TodoResponseDto.cs` |
+| **Data Layer** | `Repositories/` | `ITodoRepository.cs`, `TodoRepository.cs` |
+| **Infrastructure** | `Data/` | `TodoContext.cs` |
+| **Configuration** | `Mappings/` | `MappingProfile.cs` |
+| **Middleware** | `Middlewares/` | `GlobalExceptionMiddleware.cs` |
+| **Root Files** | `Root` | `Program.cs`, `appsettings.json`, `TodoApi.csproj` |
 
----
-
-## 🚀 Installation Guide
-
-### 1. Clone
-```bash
-git clone https://github.com/yourusername/TodoApi.git
-cd TodoApi
-2. Restore
-dotnet restore
-3. Database Config
-"ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=TodoDb;Trusted_Connection=True;"
-}
-4. Migrations
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-5. Run
-dotnet run
-6. Swagger
-
-https://localhost:5001/swagger
-
-📡 API Endpoints
-Method	Endpoint
-GET	/todo
-GET	/todo/{id}
-POST	/todo
-PUT	/todo/{id}
-DELETE	/todo/{id}
-🧪 Testing
-cURL Example
-curl -X POST https://localhost:5001/api/todo \
--H "Content-Type: application/json" \
--d '{"title":"Test","description":"Demo"}'
-⚠️ Error Format
-{
-  "statusCode": 404,
-  "message": "Not Found"
-}
-💬 FAQ
-
-Q: Production ready?
-Yes.
-
-Q: Auth support?
-Planned (JWT).
-
-📜 License
 
 MIT License © 2026 Your Name
